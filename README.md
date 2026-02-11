@@ -62,7 +62,7 @@ EasilyRescue utilise uniquement des bibliothèques Python standard et externes m
 
 ```bash
 # 1. Cloner le repository
-git clone https://github.com/votre-username/EasilyRescue.git
+git clone https://github.com/MrKube/EasilyRescue.git
 cd EasilyRescue
 
 # 2. Créer un environnement virtuel (recommandé)
