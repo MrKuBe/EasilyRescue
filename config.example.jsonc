@@ -1,0 +1,29 @@
+{
+    // Configuration pour EasilyRescue - Outil de continuité d'activité
+    // INSTRUCTIONS: Copier ce fichier en config.jsonc et remplir les valeurs réelles
+    // ⚠️ SÉCURITÉ: Ne JAMAIS commiter config.jsonc avec des vraies données sensibles
+    
+    "name": "EasilyRescue",
+    "version": "1.0.6beta",
+    "rootFolder": "./data/", // Dossier de cache local pour les données téléchargées (chemin relatif pour portabilité)
+    "data2Download": ["UF1", "UF2", "UF3", "UF4", "UF5", "UF6"], // Liste des codes de données à télécharger
+    
+    "sftp": {
+        "enabled": true, // Mettre à true pour activer le téléchargement SFTP
+        "hostname": "votre_serveur_sftp.com", // IP ou nom de domaine du serveur SFTP:
+        "port": 22,
+        "username": "votre_utilisateur", // 
+        "password": "votre_mot_de_passe", // OU utiliser une clé privée à la place
+        "private_key_path": "~/.ssh/id_rsa", // Chemin vers votre clé privée (laisser vide si utilisation du mot de passe)
+        "remote_dir": "ftp_data/CHUGA",
+        "verify_host_key": true // À true en production pour la sécurité SSH
+    },
+    
+    "settings": {
+        "delete_zip_after_unzip": true, // Mettre à true pour supprimer les .zip après décompression
+        "clean_before_download": true, // Si true, supprime les données locales AVANT de télécharger
+        "theme": "dark",
+        "notifications": true,
+        "log_level": "INFO" // DEBUG, INFO, WARNING, ERROR, CRITICAL
+    }
+}

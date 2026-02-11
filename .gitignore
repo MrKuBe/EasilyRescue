@@ -1,0 +1,64 @@
+# 🔒 SÉCURITÉ: Fichiers sensibles ne pas envoyer sur Git
+
+# Configuration avec secrets (CRITIQUE)
+config.jsonc
+.env
+.env.local
+.env.*.local
+config.local.jsonc
+
+# Fichiers Python à exclure (anciennes versions, backups)
+20250930_1650_EasilyRescue.py
+20251219_EasilyRescue.py
+
+# Fichiers de log (ne pas envoyer)
+/logs/
+*.log
+
+# Rapports HTML générés (index.html - contient données patients)
+index.html
+
+# Données locales et exports
+/data/
+*.zip
+
+# Fichiers de build PyInstaller (ne pas envoyer les binaires)
+*.spec
+build/
+dist/
+*.exe
+*.app
+*.dmg
+
+# Caches Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+*.egg
+
+# Environnements virtuels
+venv/
+env/
+ENV/
+.venv/
+
+# IDE et outils
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.bak
+
+# Fichiers temporaires
+*.tmp
+*.temp
+tmp/
+
+# Fichiers de contrôle de version
+*.orig
+*.rej
